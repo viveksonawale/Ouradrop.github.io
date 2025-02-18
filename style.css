@@ -1,0 +1,2362 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Helvetica World', Arial, sans-serif;
+    background-color: #1a0000;  
+    color: #fff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
+  
+  /* Navbar Styling */
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a0000;
+  }
+  
+  /* Logo */
+
+  .logo{
+    
+    background-color: transparent;
+    margin-left: 45px;
+  }
+  .logo img {
+    width: 5rem;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: 5.5rem; /* Shift the entire nav links to the left */
+    padding-left: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a .arrow {
+    color: #ff7f00;
+    font-size: 0.8rem;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(90deg, #ff5e62, #ff9966, #c964ff, #ff5e62);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 1;
+    background-size: 200%;
+  }
+  
+  .cta-button a:hover {
+    animation: animate 1.5s linear infinite;
+ }
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+
+  50%{
+    background-position: 50%;
+  }
+  
+  100%{
+    background-position: 200%;
+  }
+}
+
+.cta-button a:before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  left: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #ff5e62,  #c964ff, #ff9966, #ff5e62);
+  background-size: 200%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.cta-button a:hover:before{
+  filter: blur(10px);
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+/* Call-to-Action Button fero mobile header */
+.cta-buttons a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #ff5e62, #ff9966, #c964ff, #ff5e62);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  background-size: 200%;
+}
+
+.cta-buttons a:hover {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate{
+0%{
+  background-position: 0%;
+}
+
+50%{
+  background-position: 50%;
+}
+
+100%{
+  background-position: 200%;
+}
+}
+
+.cta-buttons a:before{
+content: "";
+position: absolute;
+top: -5px;
+right: -5px;
+left: -5px;
+bottom: -5px;
+z-index: -1;
+background: linear-gradient(90deg, #ff5e62,  #c964ff, #ff9966, #ff5e62);
+background-size: 200%;
+border-radius: 10px;
+opacity: 0;
+transition: .5s;
+}
+
+.cta-buttons a:hover:before{
+filter: blur(10px);
+opacity: 1;
+animation: animate 1.5s linear infinite;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    background-color: #331601;
+    box-shadow: 2w 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 2rem; /* Consistent distance using rem */
+    padding-top: 1rem;
+    margin-top: 0;
+  }
+
+  .sidebar li {
+    margin: 1rem 0; /* Add vertical spacing between items */
+    list-style: none; /* Ensure no default list-style markers */
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .sidebar a .arrow {
+    color: #ff7f00;
+    font-size: 0.8rem;
+  }
+
+
+  .sidebar i.fa-xmark {
+    cursor: pointer;
+    font-size: 1.5rem; /* Make it bigger */
+    position: absolute; /* Position it properly */
+    top: 1.5rem; /* Adjust top spacing */
+    right: 1.5rem;
+  }
+
+  .menu-btn{
+    display: none;
+  }
+
+  .menu-btn i.fa-bars-staggered {
+     /* Make the icon larger */
+    color: #fff; /* Change the color to white */
+    cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  }
+
+  @media(max-width: 768px) {
+    
+    .navbar {
+      padding: 0;
+    }
+  
+    .logo {
+      margin-left: 1rem;
+    }
+
+    .logo img {
+      width: 3rem; /* Reduce logo size */
+      margin-top: 0.5rem;
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links in mobile view */
+    }
+  
+    .menu-btn {
+      display: block; /* Show menu button */
+      margin-right: 1rem; 
+    }
+  
+    .sidebar {
+      position: fixed;
+     
+      width: 100vw;
+      height: 100vh; /* Ensure it covers full screen */
+      background: rgba(51, 22, 1, 0.7); /* Semi-transparent */
+      backdrop-filter: blur(15px); /* Blur effect */
+      display: flex;
+      align-items: flex-start; /* Align items to the right */
+      padding-left: 2rem;
+      padding-top: 2rem;
+      z-index: 1000;
+      
+      /* Initially hidden */
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, visibility 0.3s;
+    }
+  
+    /* When sidebar is active (open) */
+    .sidebar.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .sidebar a {
+      font-size: 1.2rem; /* Make text slightly bigger */
+    }
+
+    .cta-button{
+      display: none;
+    }
+    .cta-buttons {
+      display: flex;  /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      width: 100%; /* Full width */
+      position: absolute; /* Make sure it adjusts within the sidebar */
+      top: 80%; /* Move to middle */
+      left: 50%; /* Move to middle */
+      transform: translate(-50%, -50%); /* Perfect centering */
+  }
+  
+  .cta-buttons a {
+      padding: 0.8rem 2rem; /* Make it larger */
+      font-size: 1.1rem; /* Bigger font size */
+      text-align: center; /* Ensure text stays centered */
+  }
+    
+  
+
+  }
+
+  /* hero sec start */
+
+  /* Customer Flow Section Styling */
+
+.customer-flow-section {
+  text-align: center;
+  padding: 3rem 1rem; /* Padding already in rem, no change needed */
+}
+
+/* Text Styling */
+.customer-flow-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem; /* Use rem for font size */
+  position: relative;
+  top: 3rem; /* Converted 50px to 3rem (assuming base font size is 16px) */
+  color: #fff;
+  font-style: italic;
+  line-height: 1.3; /* Line height remains unitless for flexibility */
+  letter-spacing: 0.15em; /* Letter spacing already in em */
+}
+
+/* Styling for the CONSTANT Text */
+.constant-text {
+  animation: gradient-move 4s infinite linear;
+  background: linear-gradient(90deg, #ff6a00, #ff4d00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-style: italic;
+  background-size: 200% 100%;
+}
+
+.constant-texts{
+  animation: gradient-move 4s infinite linear;
+  background: linear-gradient(90deg, #ff6a00, #ff4d00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-style: italic;
+  background-size: 200% 100%;
+}
+
+@keyframes gradient-move {
+  0% {
+      background-position: 200% 0; /* No change needed as it's a percentage value */
+  }
+  100% {
+      background-position: -200% 0;
+  }
+}
+
+.meet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Already responsive */
+  height: auto; /* Already responsive */
+  position: relative;
+  top: 0.625rem; /* Converted 10px to rem (10px ÷ 16 = 0.625rem) */
+}
+
+.responsive-image {
+  width: 70%; /* Already responsive */
+}
+
+.hero-text {
+  width: 100%; /* Already responsive */
+  max-width: 62.5rem; /* Converted 1000px to rem (1000px ÷ 16 = 62.5rem) */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center-align the text */
+  color: #fff;
+  padding: 1.25rem; /* Converted 20px to rem (20px ÷ 16 = 1.25rem) */
+  font-size: 1.5rem; /* Converted 24px to rem (24px ÷ 16 = 1.5rem) */
+  line-height: 0.9; /* Set to relative line spacing */
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.1em; /* Already responsive */
+}
+
+.line-one, .line-two {
+  margin: 0.625rem 0; /* Converted 10px to rem (10px ÷ 16 = 0.625rem) */
+  display: block; /* Ensure paragraphs stack vertically */
+  width: 100%; /* Already responsive */
+}
+
+
+
+@media (max-width: 768px) {
+  .customer-flow-section {
+      padding: 0.3rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .customer-flow-text {
+      font-size: 0.7rem; /* Slightly smaller font size */
+      top: 2rem; /* Adjust position for better spacing */
+      line-height: 1.2; /* Slightly reduce line height */
+      letter-spacing: 0.05em; /* Adjust letter spacing for better readability */
+  }
+
+  .constant-text {
+      font-size: 0.8rem; /* Make the highlighted text slightly larger for emphasis */
+  }
+
+  .meet {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    top: 0.5rem; /* Adjusted spacing */
+    padding-top: 2rem
+  }
+
+  .responsive-image {
+    width: 90%; /* Make the image wider on smaller screens */
+  }
+
+  .hero-text {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    font-size: 0.6rem; /* Make font size slightly smaller */
+    line-height: 1.3; /* Adjust line height for smaller font */
+  }
+
+  .line-one, .line-two {
+    margin: 0.5rem 0; /* Adjust margin for better spacing */
+    letter-spacing: 0;
+    line-height: 0.4rem;
+  }
+
+  .constant-texts{
+    font-size: 0.7rem;
+  }
+
+}
+
+/* Steps Section Start */
+
+.steps-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem; /* Converted 20px */
+  padding-top: 5rem; /* Converted 80px */
+  text-align: center;
+  gap: 1.875rem; /* Converted 30px */
+}
+
+.steps-sectionm {
+  display: none;
+  
+}
+
+.step {
+  flex: 1 1 12.5rem; /* Converted 200px */
+  max-width: 12.5rem; /* Converted 200px */
+  margin: 0.625rem; /* Converted 10px */
+}
+
+.step-icon {
+  width: 6.25rem; /* Converted 100px */
+  height: auto;
+  margin-bottom: 0.9375rem; /* Converted 15px */
+}
+
+.step-icon-consult {
+  position: relative;
+  top: -1.125rem; /* Converted -18px */
+  width: 6.25rem; /* Converted 100px */
+  height: auto;
+  margin-bottom: 0.9375rem; /* Converted 15px */
+}
+
+.arrow-icon {
+  width: 3.125rem; /* Converted 50px */
+  height: 1.875rem; /* Converted 30px */
+}
+
+.arrow-icon2 {
+  width: 3.125rem; /* Converted 50px */
+  height: 1.875rem; /* Converted 30px */
+  transform: scaleY(-1);
+}
+
+.step-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.04375rem; /* Converted 32.7px */
+  font-weight: 700;
+  margin-bottom: 0.625rem; /* Converted 10px */
+}
+
+.step-title1 {
+  position: relative;
+  top: -1.25rem; /* Converted -20px */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.04375rem; /* Converted 32.7px */
+  font-weight: 700;
+  margin-bottom: 0.625rem; /* Converted 10px */
+}
+
+.step-description1 {
+  position: relative;
+  top: -1.25rem; /* Converted -20px */
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88125rem; /* Converted 14.1px */
+}
+
+.step-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.88125rem; /* Converted 14.1px */
+  line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+  
+  .steps-section {
+    display: none;
+  }
+  .steps-sectionm {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 1rem; /* Adjust padding for smaller screens */
+    gap: 1rem; /* Reduce gap between items */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+   .step {
+    flex: 0 0 0;
+    max-width: 100%; /* Allow full width for each step */
+    margin-bottom: 0; /* Reduce bottom margin for steps */
+    
+  }
+
+  .arrow-icon,
+  .arrow-icon2 {
+    width: 2rem; /* Smaller arrows for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0rem; /* Reduce gap between step and arrow */
+  }
+
+  .arrow-icon2 {
+    width: 2rem; /* Smaller arrows for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0rem; /* Reduce gap between step and arrow */
+    transform: scaleY(1);
+  }
+
+  .step-icon,
+  .step-icon-consult {
+    width: 4rem; /* Smaller icons for smaller screens */
+    margin-bottom: 0.3rem; /* Adjust spacing */
+  }
+
+  .step-title,
+  .step-title1 {
+    font-size: 1.5rem; /* Reduce font size for titles */
+    margin-bottom: 0.5rem; /* Reduce bottom margin for titles */
+  }
+
+  .step-description,
+  .step-description1 {
+    font-size: 0.75rem; /* Reduce font size for descriptions */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+}
+
+
+/* larger cta */
+/* CTA Container */
+
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6.25rem; /* Converted 100px */
+  gap: 1rem;
+  text-align: center;
+}
+
+/* CTA Button */
+.cta-button1 {
+  font-family: 'Helvetica World', Arial, sans-serif;
+  display: inline-block;
+  width: 28.125rem; /* Converted 450px */
+  height: auto;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem; /* Converted 10px */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem; /* Converted 1px */
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  background-size: 200%;
+}
+
+.cta-button1:hover {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.cta-button1:before {
+  content: "";
+  position: absolute;
+  top: -0.3125rem; /* Converted -5px */
+  right: -0.3125rem; /* Converted -5px */
+  left: -0.3125rem; /* Converted -5px */
+  bottom: -0.3125rem; /* Converted -5px */
+  z-index: -1;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  background-size: 200%;
+  border-radius: 0.625rem; /* Converted 10px */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cta-button1:hover:before {
+  filter: blur(0.625rem); /* Converted 10px */
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+/* Tagline */
+.cta-tagline {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.4px; /* Simplified unitless value */
+  letter-spacing: 0.15em;
+  color: #d6c6b5;
+}
+
+/* Responsive Styles for 768px */
+@media (max-width: 768px) {
+  .cta-container {
+    margin-top: 0.3rem; /* Reduce top margin */
+    gap: 0.5rem; /* Reduce the gap between elements */
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  /* Adjusting CTA Button for smaller screens */
+  .cta-button1 {
+    width: 16rem; /* Smaller button width */
+    font-size: 0.72rem; /* Reduce font size */
+    padding: 0.8rem 1.5rem; /* Adjust padding for better fit */
+    border-radius: 0.5rem; /* Slightly smaller border radius */
+  }
+
+  /* Adjusting the animation blur size */
+  .cta-button1:before {
+    top: -0.25rem; /* Adjust to fit smaller button */
+    right: -0.25rem;
+    left: -0.25rem;
+    bottom: -0.25rem;
+    filter: blur(0.5rem); /* Slightly reduce blur */
+  }
+
+  /* Adjusting Tagline for smaller screens */
+  .cta-tagline {
+    letter-spacing: 0;
+    font-size: 0.55rem; /* Smaller font size */
+    line-height: 1.2; /* Adjust line height */
+    padding: 0.1rem; /* Add padding for spacing */
+  }
+}
+
+
+/* stat section start */
+
+
+.marketings {
+  position: relative;
+  font-weight: bold;
+  margin-right: 56.25rem; /* 900px / 16 */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.03125rem; /* 0.5px / 16 */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  position: relative;
+  margin-left: 3.125rem; /* 50px / 16 */
+  padding-top: 3rem;
+}
+
+.business-problems {
+  padding: 2.5rem 0; /* 40px 0px */
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.problems-containers {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px / 16 */
+  gap: 1.25rem; /* 20px / 16 */
+  max-width: 75rem; /* 1200px / 16 */
+  margin: 0 auto;
+}
+
+.problem-items {
+  padding: 1.25rem; /* 20px / 16 */
+  border-radius: 0.5rem; /* 8px / 16 */
+  box-shadow: none;
+}
+
+.bars {
+  height: 0.5rem; /* 8px / 16 */
+  width: 3.75rem; /* 60px / 16 */
+  margin: 0 auto 0.625rem; /* 10px / 16 */
+  background: linear-gradient(to right, #ff4500, #ff8c00);
+  position: relative;
+  right: 7.8125rem; /* 125px / 16 */
+}
+
+.numbers {
+  font-size: 3.08125rem; /* 49.3px / 16 */
+  font-weight: 700;
+  margin: 0.625rem 0; /* 10px / 16 */
+  position: relative;
+  right: 6.875rem; /* 110px / 16 */
+}
+
+.numberss {
+  font-size: 3.08125rem; /* 49.3px / 16 */
+  font-weight: 700;
+  margin: 0.625rem 0; /* 10px / 16 */
+  position: relative;
+  right: 5.3125rem; /* 85px / 16 */
+}
+
+.number {
+  font-size: 3.08125rem; /* 49.3px / 16 */
+  font-weight: 700;
+  margin: 0.625rem 0; /* 10px / 16 */
+  position: relative;
+  left: 0.9375rem; /* 15px / 16 */
+}
+
+.percentages {
+  font-size: 1.25rem; /* 20px / 16 */
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+  text-align: initial;
+  position: relative;
+  margin-left: 0.9375rem; /* 15px / 16 */
+}
+
+.marketing-section {
+  display: none;
+}
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+
+  .stats { 
+    display: none;
+}
+
+  .bars {
+    width: 2.5rem; /* Adjust bar width */
+    margin-left: 0; /* Align bars to the left */
+    margin-bottom: 0.625rem; /* Add space below the bars */
+    background: linear-gradient(to right, #ff4500, #ff8c00);
+    position: relative; /* Ensure bars can align properly */
+    left: 0; /* Explicitly set to 0 to ensure left alignment */
+    }
+
+  .marketing-section {
+    display: block;
+    padding: 40px 10px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    color: white; /* Orange color for title */
+    margin-left: 0.8rem; /* Add a small space from the left */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: left;
+  }
+  
+  
+  /* Stats Grid for Two Columns */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+  }
+  
+  .stat {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    padding-left: 25px;
+    text-align: left;
+    
+  }
+  
+  .stat h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white
+  }
+  
+  .stat p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+}
+
+
+/* Chart Start */
+
+
+.digital-agency {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  gap: 1.25rem; /* Converted 20px to 1.25rem */
+  max-width: 75rem; /* Converted 1200px to 75rem */
+  margin: auto;
+  padding-top: 6.25rem; /* Converted 100px to 6.25rem */
+}
+
+/* Text Content Styling */
+.content {
+  flex: 1 1 31.25rem; /* Converted 500px to 31.25rem */
+  max-width: 37.5rem; /* Converted 600px to 37.5rem */
+}
+
+.content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem; /* Already in rem */
+  margin-bottom: 0.9375rem; /* Converted 15px to 0.9375rem */
+  font-weight: bold;
+  letter-spacing: 0.125rem; /* Converted 2px to 0.125rem */
+}
+
+.height {
+  line-height: 1.4; /* No need to change, already relative */
+}
+
+.highlights {
+  font-size: 1.3rem; /* Already in rem */
+  margin-bottom: 0.9375rem; /* Converted 15px to 0.9375rem */
+  color: #ff4d00; /* Highlight color */
+}
+
+.bold-text {
+  font-size: 1.3rem; /* Already in rem */
+  margin-bottom: 0.9375rem; /* Converted 15px to 0.9375rem */
+  font-weight: bold;
+  line-height: 1.4; /* No need to change, already relative */
+}
+
+.highlight-text {
+  color: #ff4d00;
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1 1 18.75rem; /* Converted 300px to 18.75rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-img {
+  max-width: 100%; /* No change, already relative */
+  height: auto; /* No change, ensures responsiveness */
+}
+
+/* Responsive Styles for 768px and Below */
+
+@media (max-width: 768px) {
+  .digital-agency {
+    flex-direction: column; /* Stack content vertically */
+    padding-top: 3rem; /* Reduced padding for smaller screens */
+  }
+
+  .content {
+    flex: 1 1 auto; /* Allow content to shrink naturally */
+    max-width: 100%; /* Use full width on smaller screens */
+    padding: 0 1rem; /* Add padding for spacing */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .content h1 {
+    font-size: 2rem; /* Scale down the font size for smaller screens */
+    letter-spacing: 0.1rem; /* Adjust letter spacing for balance */
+  }
+
+  .height {
+    font-size: 0.75rem;
+    line-height: 1.7; /* Adjust line height for better text density on smaller screens */
+    text-align: left; /* Ensure content is aligned to the left */
+    padding-left: 0.5rem;
+    margin-bottom: 0; /* Adjust spacing */
+    margin: 0 auto;
+    
+  }
+
+  .bold-text {
+    font-size: 0.8rem; /* Reduce font size for highlights and bold text */
+    margin-bottom: 0.7rem; /* Adjust spacing */
+    text-align: left; /* Ensure content is aligned to the left */
+    padding-left: 0.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .image-container {
+    flex: 1 1 auto; /* Allow the image container to adapt */
+    margin-top: 1.5rem; /* Add spacing between text and image */
+  }
+
+  .responsive-img {
+    max-width: 80%; /* Slightly reduce image size for better fit */
+  }
+}
+
+
+/* Box Styling Start */
+
+.marketing-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 6.25rem 0; /* Replace bottom positioning */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 87.5rem; /* 1400px to rem */
+  margin: 0 auto;
+}
+
+.constant-text3 {
+  animation: gradient-move 4s infinite linear;
+  background: linear-gradient(90deg, #ff6a00, #ff4d00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  background-size: 200% 100%;
+}
+
+/* Heading Styling */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem; /* 20px to rem */
+  color: #fff;
+}
+
+
+/* Subtext Styling */
+.subtext {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ddd;
+  line-height: 1.2;
+}
+
+/* for mobile */
+
+.marketing-successm {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 6.25rem 0; /* Replace bottom positioning */
+}
+
+/* Content Wrapper */
+.content-wrapperm {
+  max-width: 87.5rem; /* 1400px to rem */
+  margin: 0 auto;
+}
+
+.constant-text3m {
+  animation: gradient-move 4s infinite linear;
+  background: linear-gradient(90deg, #ff6a00, #ff4d00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  background-size: 200% 100%;
+}
+
+/* Heading Styling */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem; /* 20px to rem */
+  color: #fff;
+}
+
+
+/* Subtext Styling */
+.subtextm {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ddd;
+  line-height: 1.2;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+
+  .marketing-success {
+    display: none;
+  }
+  .marketing-successm {
+    display: block;
+    flex-direction: column; /* Stack content vertically */
+    padding: 2rem 1rem; /* Compact padding for small screens */
+  }
+
+  .content-wrapperm {
+    max-width: 90%; /* Reduce max-width for better readability */
+    text-align: center; /* Ensure content stays centered */
+  }
+
+  h1 {
+    font-size: 1.7rem; /* Smaller font size for headings */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .subtextm {
+    font-size: 0.9rem; /* Smaller font size for subtext */
+    line-height: 1.4; /* Adjusted for readability */
+  }
+
+  .constant-text3m {
+    font-size: 1.7rem; /* Smaller font size for animated text */
+  }
+}
+
+
+/* Box Styling */
+
+/* Container Styling */
+.container {
+  font-size: 1.625rem; /* 26px to rem */
+  display: flex;
+  flex-direction: row; /* Align boxes in a row */
+  justify-content: center;
+  align-items: stretch; /* Align at the top */
+  gap: 1.25rem; /* 20px to rem (space between boxes) */
+  margin: 1.25rem auto; /* 20px to rem */
+  width: 100%;
+  max-width: 45rem; /* Remove the max-width to allow full row width  40.325rem*/
+  height: auto;
+}
+
+
+.box {
+  flex: 1;
+  padding: 1.25rem; /* 20px to rem */
+  border-radius: 0.625rem; /* 10px to rem */
+  color: white;
+  text-align: left;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* Ensure gradient stays inside the box */
+  background: radial-gradient(circle at 50% 50%, #ff3131, #ff914d);
+  background-size: 200% 200%; /* Allow space for the gradient to move */
+  animation: moveGradient 2s infinite alternate; /* Gradient animation */
+  min-height: 25rem; /* 400px to rem */
+  font-weight: bold;
+  position: relative;
+  padding-top: 3rem; /* Added padding to ensure the text does not overlap */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure equal spacing within the box */
+}
+
+/* Gradient Animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Add top-text styling for both boxes */
+.box .top-text {
+  font-family: 'League Spartan', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Increased font size to 2rem */
+  font-weight: bold;
+  color: white; /* Color of the text */
+  margin-top: 1.5rem; /* Adds a little space from the top */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem; /* Added margin to push the list down below the top text */
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.9375rem; /* 15px to rem */
+  font-size: 1.2rem; /* Kept unchanged as it's already in rem */
+}
+
+
+
+
+/* Image Styling */
+.icon-image {
+  width: 1.875rem; /* 30px to rem */
+  height: 1.875rem; /* 30px to rem */
+  margin-right: 0.625rem; /* 10px to rem */
+}
+
+@media (max-width: 768px) {
+  /* Adjust the container to stack the boxes */
+  .container {
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: center; /* Center the boxes horizontally */
+    gap: 2rem; /* Reduce the gap between the boxes */
+  }
+
+  /* Adjust the box width and height */
+  .box {
+    width: 80%; /* Allow the box to take full width */
+    min-height: 20rem; /* Adjust the height of the boxes */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  /* Reduce the font size for top-text */
+  .box .top-text {
+    font-size: 1.5rem; /* Reduce font size */
+    margin-top: 1rem; /* Adjust margin to fit better */
+  }
+
+  /* Adjust the font size of the list */
+  ul li {
+    margin-top: 1rem;
+    font-size: 1.125rem; /* Slightly smaller font size */
+  }
+
+  /* Adjust image size */
+  .icon-image {
+    width: 1.5rem; /* Make images smaller */
+    height: 1.5rem; /* Keep images proportionate */
+  }
+}
+
+
+/* feeling text */
+
+.feeling{
+  font-family: "Kaushan Script", serif;
+  font-weight: 400;
+  margin-top: 5rem;
+  font-style: normal;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.free{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 5;
+}
+
+
+
+/* CTA Button */
+
+
+.cta-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; /* Converted 100px */
+  gap: 1rem;
+  text-align: center;
+}
+
+.cta-button2 {
+  font-family: 'Helvetica World', Arial, sans-serif;
+  display: inline-block;
+  width: 28.125rem; /* Converted 450px */
+  height: auto;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem; /* Converted 10px */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem; /* Converted 1px */
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  background-size: 200%;
+}
+
+.cta-button2:hover {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.cta-button2:before {
+  content: "";
+  position: absolute;
+  top: -0.3125rem; /* Converted -5px */
+  right: -0.3125rem; /* Converted -5px */
+  left: -0.3125rem; /* Converted -5px */
+  bottom: -0.3125rem; /* Converted -5px */
+  z-index: -1;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  background-size: 200%;
+  border-radius: 0.625rem; /* Converted 10px */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cta-button2:hover:before {
+  filter: blur(0.625rem); /* Converted 10px */
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+/* Media Query for 768px */
+@media (max-width: 768px) {
+  .feeling {
+    font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    letter-spacing: 2;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .free {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+    line-height: 2;
+  }
+
+  .cta-container {
+    margin-top: 0.3rem; /* Reduce top margin */
+    gap: 0.5rem; /* Reduce the gap between elements */
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  .cta-button2 {
+    width: 16rem; /* Smaller button width */
+    font-size: 0.72rem; /* Reduce font size */
+    padding: 0.8rem 1.5rem; /* Adjust padding for better fit */
+    border-radius: 0.5rem; /* Slightly smaller border radius */
+  }
+
+  /* Adjusting the animation blur size */
+  .cta-button2:before {
+    top: -0.25rem; /* Adjust to fit smaller button */
+    right: -0.25rem;
+    left: -0.25rem;
+    bottom: -0.25rem;
+    filter: blur(0.5rem); /* Slightly reduce blur */
+  }
+}
+
+/* Start white section */
+
+.background {
+  display: block;
+  width: 100%; /* No need to change this as it's already a responsive percentage value */
+  margin-top: 10rem;
+}
+
+@media (max-width: 768px) {
+  .background {
+    width: 100%; /* Slightly reduce the width for smaller screens */
+    margin: 5rem auto; /* Center the element */
+  }
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3.75rem 1.25rem; /* 60px -> 3.75rem, 20px -> 1.25rem */
+  background-color: white;
+}
+
+.cta-intro {
+  font-family: "Kaushan Script", serif;
+  font-size: 2.5rem; /* No change, already in rem */
+  font-weight: 400;
+  font-style: bold;
+  letter-spacing: 0.0875rem; /* 1.4px -> 0.0875rem */
+  color: #000000;
+  margin-bottom: 0.9375rem; /* 15px -> 0.9375rem */
+  position: relative;
+  transform: translateY(-5.625rem); /* 90px -> 5.625rem */
+}
+
+.cta-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem; /* No change, already in rem */
+  font-weight: 750;
+  color: #000;
+  line-height: 1.4; /* Unchanged */
+  margin: 1.5625rem 0; /* 25px -> 1.5625rem */
+  position: relative;
+  transform: translateY(-5.625rem); /* 90px -> 5.625rem */
+  white-space: nowrap;
+}
+
+.spot {
+  font-family: "Kaushan Script", serif;
+  font-size: 3.08rem; /* No change, already in rem */
+  font-weight: 400;
+  font-style: bold;
+  margin-bottom: 2.5rem; /* 40px -> 2.5rem */
+  letter-spacing: 0.0625rem; /* 1px -> 0.0625rem */
+  color: #000000;
+  position: relative;
+  transform: translateY(-5.625rem); /* 90px -> 5.625rem */
+}
+
+.arrows i {
+  font-size: 2rem; /* No change, already in rem */
+  color: #ff4d00;
+  margin: 0 5.3125rem; /* 85px -> 5.3125rem */
+  position: relative;
+  transform: translateY(-5.625rem); /* 90px -> 5.625rem */
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5.625rem); /* 90px -> 5.625rem */
+  }
+  50% {
+    transform: translateY(-6.25rem); /* 100px -> 6.25rem */
+  }
+}
+
+.full-width-bg {
+  background-color: #fff;
+  width: 100%; /* Unchanged */
+}
+
+#services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px -> 15.625rem */
+  gap: 1.25rem; /* 20px -> 1.25rem */
+  max-width: 75rem; /* 1200px -> 75rem */
+  margin: 0 auto; /* Unchanged */
+  padding: 1.25rem; /* 20px -> 1.25rem */
+  text-align: center;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border-radius: 0.5rem; /* 8px -> 0.5rem */
+  padding: 1.25rem; /* 20px -> 1.25rem */
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* 4px, 6px -> 0.25rem, 0.375rem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-0.3125rem); /* 5px -> 0.3125rem */
+  box-shadow: 0 0.375rem 0.625rem #ff4d00; /* 6px, 10px -> 0.375rem, 0.625rem */
+}
+
+/* Images */
+.service-card img {
+  width: 4rem; /* 64px -> 4rem */
+  height: 4rem; /* 64px -> 4rem */
+  margin-bottom: 0.9375rem; /* 15px -> 0.9375rem */
+}
+
+/* Titles */
+.service-card h3 {
+  font-size: 1.125rem; /* 18px -> 1.125rem */
+  margin: 0.625rem 0; /* 10px -> 0.625rem */
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 145, 0);
+  font-weight: bold;
+  font-family: 'Helvetica World', Arial, sans-serif;
+}
+
+/* Descriptions */
+.service-card p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem; /* 14px -> 0.875rem */
+  color: #555;
+  line-height: 1.5; /* Unchanged */
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    margin-top: -5rem;
+    padding: 2.5rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .cta-intro {
+    transform: translateY(-0.5rem); /* Adjust upward movement for smaller screens */
+    font-size: 1.2rem; /* Scale down font sizes */
+  }
+
+  .cta-heading{
+    transform: translateY(-1.5rem); /* Adjust upward movement for smaller screens */
+    font-size: 1.3rem; /* Scale down font sizes */
+    
+  }
+  
+  .spot {
+    transform: translateY(-2.5rem); /* Adjust upward movement for smaller screens */
+    font-size: 1.5rem; /* Scale down font sizes */
+
+  }
+
+  .arrows {
+    display: flex; /* Display arrows in a row */
+    justify-content: center; /* Center the arrows horizontally */
+    gap: 2rem; /* Space between arrows */
+    transform: translateY(2.5rem);
+  }
+
+  .arrows i {
+    font-size: 1.9rem;
+    margin: 0; /* Remove the previous margin to keep them aligned properly */
+  }
+
+  #services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 0.5rem; /* Increased gap between cards */
+    justify-items: center; /* Centers the cards */
+
+  }
+
+  .service-card {
+    padding: 2rem 1rem; /* Reduce card padding */
+  }
+
+  .service-card h3 {
+    font-size: 1rem; /* Scale down title font size */
+  }
+
+  .service-card p {
+    font-size: 0.75rem; /* Scale down description font size */
+  }
+
+  .service-card img {
+    width: 3rem; /* Scale down image size */
+    height: 3rem;
+  }
+}
+
+
+/* try ouradrop */ 
+
+.try {
+  text-align: center;
+  position: relative;
+}
+
+/* Image Wrapper Styling */
+.imagebreak img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .imagebreak img {
+    width: 100%; /* Slightly reduce the width for smaller screens */
+  }
+}
+
+/* Text Wrapper Styling */
+.today {
+  background-color: #1a0000; /* Dark brown color */
+  color: #fff; /* White text */
+  padding: 3.125rem 1.25rem; /* 50px becomes 3.125rem (1rem = 16px) */
+}
+
+/* Heading Styling */
+.today h1 {
+  font-family: 'Lato', 'sans-serif';
+  font-size: 3rem; /* 3rem (48px, but relative to root font-size) */
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 59.375rem; /* 950px becomes 59.375rem */
+  line-height: 1.2;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .today {
+    margin-top: 2rem;
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .today h1 {
+    font-size: 1.3rem; /* Make the heading smaller */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+}
+
+/* CTA Button */
+
+
+.cta-container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0; /* Converted 100px */
+  gap: 1rem;
+  text-align: center;
+}
+
+.cta-button3 {
+  font-family: 'Helvetica World', Arial, sans-serif;
+  display: inline-block;
+  width: 28.125rem; /* Converted 450px */
+  height: auto;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem; /* Converted 10px */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem; /* Converted 1px */
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  background-size: 200%;
+}
+
+.cta-button3:hover {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.cta-button3:before {
+  content: "";
+  position: absolute;
+  top: -0.3125rem; /* Converted -5px */
+  right: -0.3125rem; /* Converted -5px */
+  left: -0.3125rem; /* Converted -5px */
+  bottom: -0.3125rem; /* Converted -5px */
+  z-index: -1;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  background-size: 200%;
+  border-radius: 0.625rem; /* Converted 10px */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cta-button3:hover:before {
+  filter: blur(0.625rem); /* Converted 10px */
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .cta-container3 {
+    margin-top: -1rem; /* Reduce top margin */
+    gap: 0.5rem; /* Reduce the gap between elements */
+    padding: 1rem; /* Add padding for better spacing */
+    
+  }
+  
+  .cta-button3 {
+    width: 16rem; /* Smaller button width */
+    font-size: 0.72rem; /* Reduce font size */
+    padding: 0.8rem 1.5rem; /* Adjust padding for better fit */
+    border-radius: 0.5rem; /* Slightly smaller border radius */
+  }
+  
+  /* Adjusting the animation blur size */
+  .cta-button3:before {
+    top: -0.25rem; /* Adjust to fit smaller button */
+    right: -0.25rem;
+    left: -0.25rem;
+    bottom: -0.25rem;
+    filter: blur(0.5rem); /* Slightly reduce blur */
+  }
+
+}
+
+.reviews{
+  position: relative;
+  top: -1.5rem;
+}
+
+@media (max-width: 768px) {
+  .reviews{
+    
+    top: -3rem;
+  }
+}
+
+/* faq */
+
+.sect {
+  min-height: 100vh;
+  /* width: 80%; */
+  width: 90%;
+  max-width: 75rem; /* 1200px = 75rem (assuming root font size is 16px) */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem; /* 3rem is responsive and scales with root font size */
+  margin: 2rem 0;
+}
+
+.faq {
+  /* max-width: 700px; */
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  /* border-bottom: 2px solid #fff; */
+  cursor: pointer;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem; /* Converted from px to rem */
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.answer p {
+  font-family: 'Lato', sans-serif;
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.2rem; /* Converted from px to rem */
+}
+
+.faq.active .answer {
+  max-height: 18.75rem; /* 300px = 18.75rem */
+  border-bottom: 0.03rem ridge #b8a597; /* 0.5px = 0.03rem */
+  padding-bottom: 1rem;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active .svg {
+  transform: rotate(180deg);
+}
+
+.svg {
+  position: relative;
+  right: 0.625rem; /* 10px = 0.625rem */
+  transition: transform 0.5s ease-in;
+  height: auto; /* Set a fixed height for the SVG icon */
+  display: inline-block;
+  vertical-align: middle; /* Ensure proper alignment with text */
+  font-size: 1.25rem;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-0.625rem); /* 10px = 0.625rem */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .sect {
+    width: 90%; /* Slightly increase width for smaller screens */
+    padding: 0.5rem;
+    padding-bottom: 0;
+    height: auto;         /* Adjusts height based on content */
+    min-height: auto;     /* Overrides the default 100vh */
+    max-height: 90vh;  
+  }
+
+  .title {
+    font-size: 1.6rem; /* Decrease font size for smaller screens */
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .question h3 {
+    font-size: 0.8rem; /* Adjust font size of questions */
+    line-height: 1.4;
+  }
+
+  .answer p {
+    font-size: 0.8rem; /* Adjust font size of answers */
+  }
+
+  .svg {
+    right: 0.1rem; /* Adjust spacing of SVG icons */
+    font-size: 0.9rem;
+  }
+
+  .faq {
+    margin-top: 0.5rem;
+  }
+}
+
+/* footer sec starts */
+
+.footer {
+  color: rgb(255, 255, 255);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 21.875rem; /* 350px / 16 */
+  flex-wrap: wrap;
+  position: relative;
+  top: 5rem; /* 80px / 16 */
+  background: linear-gradient(180deg, #1a0000, #300101, #5b0505);
+}
+
+.left-side {
+  max-width: 25rem; /* 400px / 16 */
+  margin-left: 1.125rem; /* 18px / 16 */
+}
+
+.full-logo {
+  width: 18.75rem; /* 300px / 16 */
+  display: block;
+  margin-bottom: 0.625rem; /* 10px / 16 */
+  position: relative;
+  right: 0.9rem; /* 20px / 16 */
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem; /* 18px / 16 */
+  margin-bottom: 1.25rem; /* 20px / 16 */
+  font-weight: bold;
+  position: relative;
+  bottom: 0.625rem; /* 10px / 16 */
+}
+
+.location {
+  font-family: 'Lato', sans-serif;
+  color: #d6d6d6;
+  font-size: 1rem; /* 16px / 16 */
+  line-height: 1.6;
+  margin-bottom: 1.25rem; /* 20px / 16 */
+}
+
+.mumbai {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem; /* 18px / 16 */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.mumbai:hover {
+  color: #ff4d00;
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  flex-wrap: column;
+  gap: 1.875rem; /* 30px / 16 */
+  margin-bottom: 1.25rem; /* 20px / 16 */
+  margin-top: 3.125rem; /* 50px / 16 */
+  column-gap: 5.625rem; /* 90px / 16 */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px / 16 */
+}
+
+.column a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem; /* 16px / 16 */
+}
+
+.contacts {
+  margin-top: 5.625rem; /* 90px / 16 */
+  font-size: 1.25rem; /* 20px / 16 */
+  display: flex;
+  gap: 1.875rem; /* 30px / 16 */
+}
+
+.contacts i {
+  color: white;
+  border: 0.125rem solid #ff4d00; /* 2px / 16 */
+  border-radius: 50%;
+  background-color: #ff4d00;
+  padding: 0.5rem; /* 8px / 16 */
+  margin-right: 0.5rem; /* 8px / 16 */
+  font-size: 1rem; /* 16px / 16 */
+}
+
+.contacts p {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem; /* 5px / 16 */
+  margin: 0;
+  font-size: 1rem; /* 16px / 16 */
+  font-style: bold;
+}
+
+.contacts p:first-child {
+  white-space: nowrap;
+}
+
+.contacts p:first-child span {
+  margin-left: 0.3125rem; /* 5px / 16 */
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* social icons */
+.social-icons {
+  display: flex; /* Aligns icons in a single line */
+  justify-content: flex-start; /* Centers the icons */
+  padding-top: 3.125rem; /* 50px / 16 */
+  gap: 1.25rem; /* 20px / 16 */
+  margin-left: 0;
+}
+
+.social-icons a {
+  text-decoration: none; /* Removes underline from links */
+  font-size: 1.5rem; /* Icon size (no change needed as it's already in rem) */
+  color: #ffffff; /* Default icon color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  display: flex; /* Ensures the content stays centered */
+  align-items: center;
+  justify-content: center;
+  width: 3.125rem; /* 50px / 16 */
+  height: 2.5rem; /* 40px / 16 */
+  border: 0.125rem solid transparent; /* 2px / 16 */
+  border-radius: 50%; /* Rounds the border */
+  box-sizing: border-box;
+}
+
+.social-icons a:hover {
+  color: #ff4d00; /* Changes icon color to white */
+  padding: 0; /* Prevents additional padding from shifting icons */
+  font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stacks footer sections vertically */
+    gap: 5rem; /* Decreases the gap between sections */
+  }
+
+  .left-side {
+    max-width: 100%; /* Ensures full width for smaller screens */
+
+  }
+
+  .full-logo,
+  .tagline {
+    display: block;
+    margin: 0 auto; /* Centers the elements horizontally */
+    text-align: center; /* Ensures tagline text is centered */
+  }
+
+  .full-logo {
+    width: 19em; /* Decreases logo size */
+    margin-bottom: 1rem; /* Increases bottom margin */ 
+  }
+
+  .tagline {
+    font-size: 1.2rem; /* Reduces font size */
+    margin-bottom: 3rem; /* Increases margin */
+    position: relative;
+    margin-right: 40px;
+  }
+
+  .location {
+    font-size: 0.7rem; /* Reduces font size */
+    margin-bottom: 1rem; /* Reduces margin */
+  }
+
+  .links {
+    column-gap: 3rem; /* Reduces column gap */
+    
+  }
+
+  .links a {
+    font-size: 0.9rem;
+  }
+
+
+  .contacts {
+    margin-top: 3rem;
+    font-size: 0.8rem; /* Reduces font size */
+    gap: 2.5rem; /* Decreases gap */
+  }
+
+  .contacts p {
+    font-size: 0.85rem; /* Reduces font size */
+  }
+
+  .contacts i {
+    font-size: 0.7rem; /* Reduces font size */
+    padding: 0.3rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem; /* Adjust padding for smaller screens */
+    gap: 1rem; /* Reduces space between icons */
+    width: calc(100% + 20px);  /* Adjust based on parent’s margin */
+    margin-left: -20px;        /* Negative margin to cancel the parent's margin-left */
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+
+  }
+
+  .social-icons a {
+    width: 2.5rem; /* Reduces width of icons */
+    height: 2.5rem; /* Keeps height equal to width */
+    font-size: 1.25rem; /* Reduces icon size */
+  }
+
+  .right-side{
+    display: none;
+  }
+
+}
+
+
+
+/* form */
+.right-side {
+  background: white;
+  color: black;
+  max-width: 100%;
+  width: 31.25rem; /* 500px / 16 */                                 
+  border-radius: 1.25rem; /* 20px / 16 */
+  position: relative;
+}
+
+.right-side::before {
+  content: "";
+  position: absolute;
+  top: -0.1875rem; /* -3px / 16 */
+  left: -0.1875rem; /* -3px / 16 */
+  right: -0.25rem; /* -4px / 16 */
+  bottom: -0.1875rem; /* -3px / 16 */
+  background: linear-gradient(to right, #e20055, #ad00ff);
+  border-radius: 1.25rem;
+  z-index: 1;
+  animation: moveGradient 1s linear infinite;
+  background-size: 200% 100%;
+  box-shadow: 0px 0px 0.9375rem rgba(0, 0, 0, 0.3); /* 15px / 16 */
+  overflow: visible;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.form-backgrounds {
+  position: relative;
+  background: white;
+  padding: 0.3125rem; /* 5px / 16 */
+  border-radius: 1.25rem;
+  box-shadow: 0px 0.625rem 1.875rem rgba(0, 0, 0, 0.2); /* 10px / 16, 30px / 16 */
+  z-index: 2;
+}
+
+.form-container {
+  max-width: 25rem; /* 400px / 16 */
+  margin: 3.125rem auto; /* 50px / 16 */
+  font-family: Arial, sans-serif;
+  color: #e74c3c;
+}
+
+.form-container h3 {
+  font-family: 'Helvetica World', Arial, sans-serif;
+  margin: 0;
+  font-size: 1.25rem; /* 20px / 16 */
+  position: relative;
+  bottom: 1.875rem; /* 30px / 16 */
+}
+
+.form-container h2 {
+  font-family: 'league spartan', Arial, sans-serif;
+  font-size: 1.875rem; /* 30px / 16 */
+  color: #ff3131;
+  margin: 0.625rem 0; /* 10px / 16, 20px / 16 */
+  position: relative;
+  bottom: 1.25rem; /* 20px / 16 */
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.25rem; /* 20px / 16 */
+}
+
+.form-group i {
+  position: absolute;
+  top: 0.625rem; /* 10px / 16 */
+  left: 0.3125rem; /* 5px / 16 */
+  font-size: 1.125rem; /* 18px / 16 */
+  color: #e74c3c;
+}
+
+input,
+textarea {
+  font-family: 'Lato', Arial, sans-serif;
+  width: 100%;
+  border: none;
+  border-bottom: 0.125rem solid #ff3131; /* 2px / 16 */
+  padding: 0.5rem 1.875rem; /* 8px / 16, 30px / 16 */
+  font-size: 0.875rem; /* 14px / 16 */
+  color: #333;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 5rem; /* 80px / 16 */
+  padding-left: 1.875rem; /* 30px / 16 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #e74c3c;
+}
+
+.icon {
+  position: absolute;
+  top: 0.5rem; /* 8px / 16 */
+  left: 0.3125rem; /* 5px / 16 */
+  font-size: 1rem; /* 16px / 16 */
+  color: #e74c3c;
+}
+
+/* final button */
+
+/* cta larger */
+
+/* CTA Container */
+.cta-containerx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.125rem; /* 50px / 16 */
+  gap: 1rem;
+  text-align: center;
+}
+
+/* CTA Button */
+.cta-buttonx {
+  font-family: 'Helvetica World', Arial, sans-serif;
+  display: inline-block;
+  width: 24.375rem; /* 390px / 16 */
+  height: auto;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.125rem; /* 18px / 16 */
+  padding: 1rem 2rem;
+  border-radius: 0.625rem; /* 10px / 16 */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem; /* 1px / 16 */
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  background-size: 200%;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-buttonx:hover {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 50%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+.cta-buttonx:before {
+  content: "";
+  position: absolute;
+  top: -0.3125rem; /* -5px / 16 */
+  right: -0.3125rem; /* -5px / 16 */
+  left: -0.3125rem; /* -5px / 16 */
+  bottom: -0.3125rem; /* -5px / 16 */
+  z-index: -1;
+  background: linear-gradient(90deg, #ff5e62, #c964ff, #ff9966, #ff5e62);
+  background-size: 200%;
+  border-radius: 0.625rem; /* 10px / 16 */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cta-buttonx:hover:before {
+  filter: blur(0.625rem); /* 10px / 16 */
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+/* Form Popup */
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black with transparency for blur effect */
+  z-index: 1000;
+  backdrop-filter: blur(0.3125rem); /* 5px = 0.3125rem */
+}
+
+.form-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-background {
+  position: relative;
+  background: white;
+  padding: 1.25rem 3.125rem; /* 20px = 1.25rem, 50px = 3.125rem */
+  border-radius: 1.25rem; /* 20px = 1.25rem */
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2); /* 10px = 0.625rem, 30px = 1.875rem */
+  animation: popup-fade 0.3s ease-in-out;
+}
+
+/* Popup Animation */
+@keyframes popup-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-1.25rem); /* 20px = 1.25rem */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 1.25rem; /* 20px = 1.25rem */
+  right: 1.25rem;
+  font-size: 1.875rem; /* 30px = 1.875rem */
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+
+@media (max-width: 768px) {
+
+  .form-background {
+    padding: 1rem 2rem;        /* Reduce padding */
+    border-radius: 0.75rem;      /* Slightly smaller rounded corners */
+    max-width: 90%;              /* Use more screen space */
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15); /* Softer shadow */
+  }
+
+  .form-container {
+    max-width: 90%; /* Make the form container more fluid */
+    margin: 2rem auto; /* Reduce top/bottom margin */
+    padding: 0.5rem; /* Add some internal spacing */
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem; /* Slightly reduce heading size */
+    bottom: 0.75rem;
+  }
+
+  .form-container h3 {
+    font-size: 1rem; /* Adjust subheading size */
+    bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.75rem; /* Decrease input font size */
+    padding: 0.5rem 1.8rem; /* Adjust padding for better fit */
+  }
+
+  textarea {
+    height: 4rem; /* Reduce textarea height */
+  }
+
+  .icon {
+    font-size: 0.875rem; /* Adjust icon size */
+    top: 0.4rem;
+    left: 0.25rem;
+  }
+
+
+  .close-btn {
+    top: 0.75rem;               /* Adjust close button position */
+    right: 0.75rem;
+    font-size: 1.5rem;          /* Slightly smaller close icon */
+  }
+
+  .form-popup {
+    align-items: flex-start;     /* Push form slightly down */
+    padding-top: 1rem;           /* Add space from the top */
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-buttonx {
+    width: 62vw; /* Full-width minus padding */
+    max-width: none; /* Remove max-width constraint */
+    font-size: 1rem; /* Slightly smaller font for smaller screens */
+    padding: 0.75rem 1.5rem; /* Adjust padding */
+  }
+
+  .cta-containerx {
+    margin-top: 2rem; /* Reduce top margin */
+    gap: 0.75rem; /* Reduce gap */
+  }
+}
+
+.end {
+  width: 100%;
+  height: 15vh;
+  background-color: #5b0505;
+}
+
+@media (max-width: 768px) {
+  .end {
+   height: 12vh;
+  }
+}
+
+
+ 
