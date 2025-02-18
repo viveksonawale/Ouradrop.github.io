@@ -1,824 +1,1108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="style.css">
-  <title>Ouradrop</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="stylesheet" href="style.css" />
 
-    <header>
-      
-        <nav class="navbar">
+    <!-- Tab Logo -->
 
-          <div class="logo">
-            <a href="index.html">
-              <img src="images/logos.png" alt="Ouradrop Logo">
-            </a>
-          </div>
+    <link rel="icon" type="image/png" sizes="16x16" href="OuraDropLogo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="OuraDropLogo.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="OuraDropLogo.png" />
 
-          <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
-            <li><a href=#services-container>What we do <span class="arrow">▼</span></a></li>
-            <li><a href="#who-we-are">Who we are <span class="arrow">▼</span></a></li>
-            <li><a href="#what-we-think">What we think <span class="arrow">▼</span></a></li>
-            <li><a href="#what-we-have-done">What we have done <span class="arrow">▼</span></a></li>
-            <div class="cta-buttons">
-              <a href="#contact" onclick="openPopup()">Get A Free Consultation</a>
-            </div>
-          </ul>
+    <title>Ouradrop</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logos.png" alt="Ouradrop Logo" />
+          </a>
+        </div>
 
-          
-          
-
-          <ul class="nav-links">
-             
-            <li class="hideonmobile"><a href=#services-container>What we do <span class="arrow">▼</span></a></li>
-            <li class="hideonmobile"><a href="#who-we-are">Who we are <span class="arrow">▼</span></a></li>
-            <li class="hideonmobile"><a href="#what-we-think">What we think <span class="arrow">▼</span></a></li>
-            <li class="hideonmobile"><a href="#what-we-have-done">What we have done <span class="arrow">▼</span></a></li> 
-          </ul>
-
-
-          <li class="menu-btn" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars-staggered"></i></a></li>
-
-
-          
-          <div class="cta-button">
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li>
+            <a href="#services-container"
+              >What we do <span class="arrow">▼</span></a
+            >
+          </li>
+          <li>
+            <a href="#who-we-are">Who we are <span class="arrow">▼</span></a>
+          </li>
+          <li>
+            <a href="#what-we-think"
+              >What we think <span class="arrow">▼</span></a
+            >
+          </li>
+          <li>
+            <a href="#what-we-have-done"
+              >What we have done <span class="arrow">▼</span></a
+            >
+          </li>
+          <div class="cta-buttons">
             <a href="#contact" onclick="openPopup()">Get A Free Consultation</a>
           </div>
+        </ul>
 
-         
-          
+        <ul class="nav-links">
+          <li class="hideonmobile">
+            <a href="#services-container"
+              >What we do <span class="arrow">▼</span></a
+            >
+          </li>
+          <li class="hideonmobile">
+            <a href="#who-we-are">Who we are <span class="arrow">▼</span></a>
+          </li>
+          <li class="hideonmobile">
+            <a href="#what-we-think"
+              >What we think <span class="arrow">▼</span></a
+            >
+          </li>
+          <li class="hideonmobile">
+            <a href="#what-we-have-done"
+              >What we have done <span class="arrow">▼</span></a
+            >
+          </li>
+        </ul>
 
-          
-        </nav>
+        <li class="menu-btn" onclick="showSidebar()">
+          <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+        </li>
+
+        <div class="cta-button">
+          <a href="#contact" onclick="openPopup()">Get A Free Consultation</a>
+        </div>
+      </nav>
     </header>
 
     <!-- hero section start -->
 
     <section class="customer-flow-section">
       <h2 class="customer-flow-text">
-        <em>Struggling To Get A <span class="constant-text">CONSTANT</span> Flow Of Customers?</em>
-      </h2>  
-  </section>
+        <em
+          >Struggling To Get A <span class="constant-text">CONSTANT</span> Flow
+          Of Customers?</em
+        >
+      </h2>
+    </section>
 
-  <div class="meet">
-    <img src="images/meet.png" alt="ouradrop" class="responsive-image">
-  </div>
+    <div class="meet">
+      <img src="images/meet.png" alt="ouradrop" class="responsive-image" />
+    </div>
 
-  <div class="hero-text">
-    <p class="line-one">Getting Your Branding, Marketing & Advertising Done On One Platform</p>
-  <p class="line-two">Turning <strong class="constant-texts">People</strong> Into Happy Paying <em class="constant-texts">Customers</em> Is What We Do Best</p>   <!--highlight -->
- </div>
+    <div class="hero-text">
+      <p class="line-one">
+        Getting Your Branding, Marketing & Advertising Done On One Platform
+      </p>
+      <p class="line-two">
+        Turning <strong class="constant-texts">People</strong> Into Happy Paying
+        <em class="constant-texts">Customers</em> Is What We Do Best
+      </p>
+      <!--highlight -->
+    </div>
 
- <!-- steps sec start -->
+    <!-- steps sec start -->
 
- <section class="steps-section">
-  <div class="step">
-    <img src="images/consult.png" alt="Consultation Icon" class="step-icon-consult">
-    <h2 class="step-title1">Step: 1</h2>
-    <p class="step-description1">Free 30 Min Consultation Call</p>
-  </div>
+    <section class="steps-section">
+      <div class="step">
+        <img
+          src="images/consult.png"
+          alt="Consultation Icon"
+          class="step-icon-consult"
+        />
+        <h2 class="step-title1">Step: 1</h2>
+        <p class="step-description1">Free 30 Min Consultation Call</p>
+      </div>
 
-  <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon">
+      <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon" />
 
-  <div class="step">
-    <img src="images/analysis.png" alt="Analysis Icon" class="step-icon">
-    <h2 class="step-title">Step: 2</h2>
-    <p class="step-description">
-      Analyzing Your Customers, Product/Service, Business & Current Marketing Issues
-    </p>
-  </div>
+      <div class="step">
+        <img src="images/analysis.png" alt="Analysis Icon" class="step-icon" />
+        <h2 class="step-title">Step: 2</h2>
+        <p class="step-description">
+          Analyzing Your Customers, Product/Service, Business & Current
+          Marketing Issues
+        </p>
+      </div>
 
-  <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon2">
+      <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon2" />
 
-  <div class="step">
-    <img src="images/speaker.png" alt="Strategy Icon" class="step-icon">
-    <h2 class="step-title">Step: 3</h2>
-    <p class="step-description">
-      Making Marketing Strategy According To Your Target Market, Customers & Budget
-    </p>
-  </div>
+      <div class="step">
+        <img src="images/speaker.png" alt="Strategy Icon" class="step-icon" />
+        <h2 class="step-title">Step: 3</h2>
+        <p class="step-description">
+          Making Marketing Strategy According To Your Target Market, Customers &
+          Budget
+        </p>
+      </div>
 
-  <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon">
+      <img src="images/arrow.png" alt="Arrow Icon" class="arrow-icon" />
 
-  <div class="step">
-    <img src="images/target.png" alt="Results Icon" class="step-icon">
-    <h2 class="step-title">Step: 4</h2>
-    <p class="step-description">
-      Get Instant Results Through <br>Our Service & Achieve Your <br>Dream Goals
-    </p>
-  </div>
-</section>
+      <div class="step">
+        <img src="images/target.png" alt="Results Icon" class="step-icon" />
+        <h2 class="step-title">Step: 4</h2>
+        <p class="step-description">
+          Get Instant Results Through <br />Our Service & Achieve Your
+          <br />Dream Goals
+        </p>
+      </div>
+    </section>
 
-<!-- for mobile -->
+    <!-- for mobile -->
 
- <section class="steps-sectionm">
+    <section class="steps-sectionm">
+      <div class="step">
+        <img
+          src="images/consult.png"
+          alt="Consultation Icon"
+          class="step-icon-consult"
+        />
+        <h2 class="step-title1">Step: 1</h2>
+        <p class="step-description1">Free 30 Min Consultation Call</p>
+      </div>
 
-  <div class="step">
-    <img src="images/consult.png" alt="Consultation Icon" class="step-icon-consult">
-    <h2 class="step-title1">Step: 1</h2>
-    <p class="step-description1">Free 30 Min Consultation Call</p>
-  </div>
+      <img src="images/downarrow.png" alt="Arrow Icon" class="arrow-icon" />
 
-  <img src="images/downarrow.png" alt="Arrow Icon" class="arrow-icon">
+      <div class="step">
+        <img src="images/analysis.png" alt="Analysis Icon" class="step-icon" />
+        <h2 class="step-title">Step: 2</h2>
+        <p class="step-description">
+          Analyzing Your Customers, Product/Service,<br />
+          Business & Current Marketing Issues
+        </p>
+      </div>
 
-  <div class="step">
-    <img src="images/analysis.png" alt="Analysis Icon" class="step-icon">
-    <h2 class="step-title">Step: 2</h2>
-    <p class="step-description">
-      Analyzing Your Customers, Product/Service,<br> Business & Current Marketing Issues
-    </p>
-  </div>
+      <img src="images/downarrow1.png" alt="Arrow Icon" class="arrow-icon2" />
 
-  <img src="images/downarrow1.png" alt="Arrow Icon" class="arrow-icon2">
+      <div class="step">
+        <img src="images/speaker.png" alt="Strategy Icon" class="step-icon" />
+        <h2 class="step-title">Step: 3</h2>
+        <p class="step-description">
+          Creating Marketing Strategy According To<br />
+          Your Target Market, Customers & Budget
+        </p>
+      </div>
 
-  <div class="step">
-    <img src="images/speaker.png" alt="Strategy Icon" class="step-icon">
-    <h2 class="step-title">Step: 3</h2>
-    <p class="step-description">
-      Creating Marketing Strategy According To<br> Your Target Market, Customers & Budget
-    </p>
-  </div>
+      <img src="images/downarrow.png" alt="Arrow Icon" class="arrow-icon" />
 
-  <img src="images/downarrow.png" alt="Arrow Icon" class="arrow-icon">
+      <div class="step">
+        <img src="images/target.png" alt="Results Icon" class="step-icon" />
+        <h2 class="step-title">Step: 4</h2>
+        <p class="step-description">
+          Get Instant Results Through Our Service<br />& Achieve Your Dream
+          Goals
+        </p>
+      </div>
+    </section>
 
-  <div class="step">
-    <img src="images/target.png" alt="Results Icon" class="step-icon">
-    <h2 class="step-title">Step: 4</h2>
-    <p class="step-description">
-      Get Instant Results Through Our Service<br>& Achieve Your Dream Goals
-    </p>
-  </div>
+    <!-- larger cta -->
 
- </section>
+    <div class="cta-container2">
+      <a href="#consultation" class="cta-button1" onclick="openPopup()"
+        >Get A Free Consultation >></a
+      >
+      <p class="cta-tagline">
+        No Hidden Fees, No Sales Pressure • Just Consultation
+      </p>
+    </div>
 
- <!-- larger cta -->
-
- <div class="cta-container2">
-  <a href="#consultation" class="cta-button1" onclick="openPopup()">Get A Free Consultation >></a>
-  <p class="cta-tagline">No Hidden Fees, No Sales Pressure • Just Consultation</p>
-</div>
-
-
-<!-- Stats Section Start -->
-<div class="stats">
-  <section class="business-problems">
-    <h2 class="marketings">Marketing Now</h2>
-    <div class="problems-containers">
-        <div class="problem-items">
+    <!-- Stats Section Start -->
+    <div class="stats">
+      <section class="business-problems">
+        <h2 class="marketings">Marketing Now</h2>
+        <div class="problems-containers">
+          <div class="problem-items">
             <div class="bars"></div>
             <h3 class="numbers">37%</h3>
-            <p class="percentages">of startups fail because <br> they lack in digital <br> marketing</p>
+            <p class="percentages">
+              of startups fail because <br />
+              they lack in digital <br />
+              marketing
+            </p>
+          </div>
+
+          <div class="problem-items">
+            <div class="bars"></div>
+            <h3 class="numberss">4200%</h3>
+            <p class="percentages">
+              of ROI businesses get <br />
+              through email marketing
+            </p>
+          </div>
+
+          <div class="problem-items">
+            <div class="bars"></div>
+            <h3 class="numbers">44%</h3>
+            <p class="percentages">
+              of a company’s revenue <br />
+              today is the CMO’s <br />
+              responsibility vs. 10% <br />
+              in the mid-2000s
+            </p>
+          </div>
         </div>
-  
+      </section>
+
+      <!-- next section -->
+
+      <div class="problems-containers">
         <div class="problem-items">
           <div class="bars"></div>
-          <h3 class="numberss">4200%</h3>
-          <p class="percentages">of ROI businesses get <br> through email marketing</p>
+          <h3 class="number">70%</h3>
+          <p class="percentages">
+            of customer engagement <br />
+            business got through Social <br />
+            campaigns
+          </p>
+        </div>
+
+        <div class="problem-items">
+          <div class="bars"></div>
+          <h3 class="number">30%</h3>
+          <p class="percentages">
+            annual revenue growth of<br />company depends upon<br />digital
+            marketing
+          </p>
+        </div>
+
+        <div class="problem-items">
+          <div class="bars"></div>
+          <h3 class="number">20%</h3>
+          <p class="percentages">
+            of increase conversions<br />through Paid search<br />and PPC
+            campaigns
+          </p>
+        </div>
       </div>
-  
-      <div class="problem-items">
-        <div class="bars"></div>
-        <h3 class="numbers">44%</h3>
-        <p class="percentages">of a company’s revenue <br>
-          today is the CMO’s <br>
-          responsibility vs. 10% <br>
-          in the mid-2000s</p>
     </div>
 
-    
- </div>
-  </section>
+    <!-- for mobile stats -->
 
- 
-  <!-- next section -->
+    <section class="marketing-section">
+      <h1 class="section-title">Marketing Now</h1>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>37%</h3>
+          <p>of startups fail because they lack in digital marketing</p>
+        </div>
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>4200%</h3>
+          <p>of ROI, Businesses get through email marketing</p>
+        </div>
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>44%</h3>
+          <p>of a company’s revenue today is the CMO’s responsibility</p>
+        </div>
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>70%</h3>
+          <p>
+            of customer engagement business got through social media campaigns
+          </p>
+        </div>
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>30%</h3>
+          <p>annual revenue growth of company depends upon digital marketing</p>
+        </div>
+        <div class="stat">
+          <div class="bars"></div>
+          <h3>20%</h3>
+          <p>of increase conversions through paid search and PPC campaigns</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="problems-containers">
-    <div class="problem-items">
-        <div class="bars"></div>
-        <h3 class="number">70%</h3>
-        <p class="percentages">of customer engagement <br> business got through Social <br> campaigns</p>
+    <!-- chart start -->
+
+    <section class="digital-agency">
+      <div class="content">
+        <h1>So, Why A Digital Marketing Agency?</h1>
+
+        <p class="height">
+          <strong class="constant-text">Let’s face it</strong> — a Business
+          without paying customers is like <br />building a store in the middle
+          of the desert without <br />
+          a single road leading to it.
+        </p>
+        <br /><br />
+        <p class="bold-text">
+          <strong
+            >That's Where A "<span class="constant-text"
+              >A Digital Marketing Agency</span
+            >" <br />
+            Comes In.</strong
+          >
+        </p>
+
+        <p class="height">
+          A digital marketing agency is like a “digital road” that <br />
+          moves your dream customers to your business with <br />
+          their credit cards in hand!
+        </p>
+      </div>
+      <!-- Image -->
+      <div class="image-container">
+        <img
+          src="images/chart.png"
+          alt="Digital marketing growth chart"
+          class="responsive-img"
+        />
+      </div>
+    </section>
+
+    <!-- box section start -->
+
+    <section class="marketing-success">
+      <div class="content-wrapper">
+        <h1>
+          The <span class="constant-text3">Digital Marketing</span> Is The
+          <br />
+          Secret To Your Online Success
+        </h1>
+        <p class="subtext">
+          It’s the difference between the 1,929,999,999 businesses that <br />
+          don’t make money, and the .000000002% that do!
+        </p>
+      </div>
+    </section>
+
+    <!-- for mobile -->
+    <section class="marketing-successm">
+      <div class="content-wrapperm">
+        <h1>
+          The <span class="constant-text3m">Digital Marketing</span> Is The
+          Secret To Your Online Success
+        </h1>
+        <p class="subtextm">
+          It’s the difference between the 1,929,999,999 businesses that don’t
+          make money, and the .000000002% that do!
+        </p>
+      </div>
+    </section>
+
+    <!-- box designing -->
+
+    <div class="container">
+      <!-- Left Box -->
+      <div class="box box-left">
+        <div class="top-text">Without OuraDrop</div>
+        <ul>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            No Branding
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            No Online Sales
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            No Customers
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            Outdated Marketing Strategies
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            No ROI Tracking
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            High Competition
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            No Online Visibility
+          </li>
+          <li>
+            <img
+              src="images/incorrect.png"
+              alt="Incorrect"
+              class="icon-image"
+            />
+            Sadness
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Box -->
+      <div class="box box-right">
+        <div class="top-text">With OuraDrop</div>
+        <ul>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            Branding
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            Sales Galore
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            Stream Of Customers
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            Digital Marketing <br />Strategies
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            ROI Tracking
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" /> No
+            Competition
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            High Online Visibility
+          </li>
+          <li>
+            <img src="images/correct.png" alt="Correct" class="icon-image" />
+            Opposite of Sadness
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="problem-items">
-      <div class="bars"></div>
-      <h3 class="number">30%</h3>
-      <p class="percentages">annual revenue growth of<br>company depends upon<br>digital marketing</p>
-  </div>
+    <div class="feeling">
+      <p>Do You Want To Feel The Opposite Of Sadness?</p>
+      <p class="free">Then Try Free Consultation Today!</p>
+    </div>
 
-  <div class="problem-items">
-    <div class="bars"></div>
-    <h3 class="number">20%</h3>
-    <p class="percentages">of increase conversions<br>through Paid search<br>and PPC campaigns</p>
-</div>
-</div>
- </div>
+    <!-- larger cta -->
 
- <!-- for mobile stats -->
-    
- <section class="marketing-section">
-  <h1 class="section-title">Marketing Now</h1>
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>37%</h3>
-      <p>of startups fail because they lack in digital marketing</p>
-    </div>
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>4200%</h3>
-      <p>of ROI, Businesses get through email marketing</p>
-    </div>
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>44%</h3>
-      <p>of a company’s revenue today is the CMO’s responsibility</p>
-    </div>
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>70%</h3>
-      <p>of customer engagement business got through social media campaigns</p>
-    </div>
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>30%</h3>
-      <p>annual revenue growth of company depends upon digital marketing</p>
-    </div>
-    <div class="stat">
-      <div class="bars"></div>
-      <h3>20%</h3>
-      <p>of increase conversions through paid search and PPC campaigns</p>
-    </div>
-  </div>
-</section>
-
-<!-- chart start -->
-
-<section class="digital-agency">
-  <div class="content">
-      <h1>So, Why A Digital Marketing Agency?</h1>
-  
-        <p class="height"><strong class="constant-text">Let’s face it</strong> — a Business without paying customers is like <br>building a store in the middle of the desert without <br> a single road leading to it.</p>
-      <br><br>
-      <p class="bold-text">
-          <strong>That's Where A "<span class="constant-text">A Digital Marketing Agency</span>" <br> Comes In.</strong>
+    <div class="cta-container">
+      <a href="#consultation" class="cta-button2" onclick="openPopup()"
+        >Get A Free Consultation >></a
+      >
+      <p class="cta-tagline">
+        No Hidden Fees, No Sales Pressure • Just Consultation
       </p>
-      
-      <p class="height">
-          A digital marketing agency is like a “digital road” that <br> moves your dream customers to your business with <br> their credit cards in hand!
-      </p>
-      
-      
-  </div>
-  <!-- Image -->
-  <div class="image-container">
-      <img src="images/chart.png" alt="Digital marketing growth chart" class="responsive-img">
-  </div>
-</section>
+    </div>
 
-<!-- box section start -->
+    <!-- start white section -->
 
-<section class="marketing-success">
-  <div class="content-wrapper">
-      <h1>
-          The <span class="constant-text3">Digital Marketing</span> Is The <br> Secret To Your Online Success
+    <div class="bg-image">
+      <img src="images/whitess.png" alt="chart" class="background" />
+    </div>
+
+    <section class="cta-section">
+      <p class="cta-intro">But That’s Not All Ouradrop Does...</p>
+      <h1 class="cta-heading">
+        Ouradrop Gives You Everything You<br />
+        Need To Market, Sell, And Deliver<br />
+        Your Products Online
       </h1>
-      <p class="subtext">
-          It’s the difference between the 1,929,999,999 businesses that <br> don’t make money, and the .000000002% that do!
+      <p class="spot"><em>All In One Convenient Spot!</em></p>
+      <div class="arrows">
+        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-down"></i>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
+
+      <div class="full-width-bg">
+        <div id="services-container">
+          <!-- Service Cards -->
+          <div class="service-card">
+            <img src="images/talk.png" alt="Business Consultation" />
+            <h3>Business Consultation</h3>
+            <p>
+              Getting Marketing, Competitive & SWOT analyses of your business
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/web.png" alt="Websites" />
+            <h3>Websites</h3>
+            <p>Creating your web presence exactly the way you want</p>
+          </div>
+          <div class="service-card">
+            <img src="images/cube.png" alt="Branding" />
+            <h3>Branding</h3>
+            <p>Creating brand strategies across digital platforms</p>
+          </div>
+          <div class="service-card">
+            <img src="images/mic.png" alt="Content Solutions" />
+            <h3>Content Solutions</h3>
+            <p>Creating, distributing, and optimizing valuable content</p>
+          </div>
+          <div class="service-card">
+            <img src="images/key.png" alt="SEO" />
+            <h3>SEO</h3>
+            <p>
+              Optimizing website content, structure, and authority to rank
+              higher
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/sm.png" alt="SMM" />
+            <h3>SMM</h3>
+            <p>Enhancing brand awareness and engagement in target audiences</p>
+          </div>
+          <div class="service-card">
+            <img src="images/cart.png" alt="E-Com Solutions" />
+            <h3>E-Com Solutions</h3>
+            <p>
+              Boosts online sales through targeted ads & CRO to convert
+              customers
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/message.png" alt="Retention Solutions" />
+            <h3>Retention Solutions</h3>
+            <p>
+              Nurturing leads, retaining & driving conversions through EM, WA &
+              SMS
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/android.png" alt="App Solutions" />
+            <h3>App Solutions</h3>
+            <p>Building relationships and driving conversions</p>
+          </div>
+          <div class="service-card">
+            <img src="images/magnet.png" alt="Lead Solutions" />
+            <h3>Lead Solutions</h3>
+            <p>
+              Creating targeted campaigns to attract & capture potential
+              customers
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/setting.png" alt="SEM" />
+            <h3>SEM</h3>
+            <p>Driving targeted traffic and conversions on search engines</p>
+          </div>
+          <div class="service-card">
+            <img src="images/funnel.png" alt="Funnel" />
+            <h3>Funnel</h3>
+            <p>Converting your online visitors into actual paying customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- try ouradrop -->
+
+    <section class="try">
+      <div class="imagebreak">
+        <img
+          src="images/white.png"
+          alt="Decorative white section with a wave pattern"
+          loading="lazy"
+        />
+      </div>
+      <div class="today">
+        <h1>
+          Try Ouradrop Today For Free And<br />Witness The Awesomeness For
+          Yourself
+        </h1>
+      </div>
+    </section>
+
+    <!-- larger cta -->
+
+    <div class="cta-container3">
+      <a href="#consultation" class="cta-button3" onclick="openPopup()"
+        >Get A Free Consultation >></a
+      >
+      <p class="cta-tagline">
+        No Hidden Fees, No Sales Pressure • Just Consultation
       </p>
-  </div>
-</section>
-
- <!-- for mobile -->
-<section class="marketing-successm">
-  <div class="content-wrapperm">
-      <h1>
-          The <span class="constant-text3m">Digital Marketing</span> Is The Secret To Your Online Success
-      </h1>
-      <p class="subtextm">
-          It’s the difference between the 1,929,999,999 businesses that don’t make money, and the .000000002% that do!
-      </p>
-  </div>
-</section>
-
-
-
-<!-- box designing -->
-
-<div class="container">
-  <!-- Left Box -->
-  <div class="box box-left">
-    <div class="top-text">Without OuraDrop</div>
-      <ul>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> No Branding</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> No Online Sales</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> No Customers</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> Outdated Marketing Strategies</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> No ROI Tracking</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> High Competition</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> No Online Visibility</li>
-          <li><img src="images/incorrect.png" alt="Incorrect" class="icon-image"> Sadness</li>
-      </ul>
-  </div>
-
-  <!-- Right Box -->
-  <div class="box box-right">
-    <div class="top-text">With OuraDrop</div>
-      <ul>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> Branding</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> Sales Galore</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> Stream Of Customers</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> Digital Marketing <br>Strategies</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> ROI Tracking</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> No Competition</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> High Online Visibility</li>
-          <li><img src="images/correct.png" alt="Correct" class="icon-image"> Opposite of Sadness</li>
-      </ul>
-  </div>
-</div>
-
-
-
-<div class="feeling">
-  <p>Do You Want To Feel The Opposite Of Sadness?</p>
-  <p class="free">Then Try Free Consultation Today!</p>
-</div>
-
-
- <!-- larger cta -->
-
- <div class="cta-container">
-  <a href="#consultation" class="cta-button2" onclick="openPopup()">Get A Free Consultation >></a>
-  <p class="cta-tagline">No Hidden Fees, No Sales Pressure • Just Consultation</p>
-</div>
-
-
-<!-- start white section -->
-
-<div class="bg-image">
-  <img src="images/whitess.png" alt="chart" class="background">
-</div>
-
-<section class="cta-section">
-  <p class="cta-intro">But That’s Not All Ouradrop Does...</p>
-  <h1 class="cta-heading">
-      Ouradrop Gives You Everything You<br>
-      Need To Market, Sell, And Deliver<br>
-      Your Products Online
-  </h1>
-  <p class="spot"><em>All In One Convenient Spot!</em></p>
-  <div class="arrows">
-      <i class="fa-solid fa-angles-down"></i>
-      <i class="fa-solid fa-angles-down"></i>
-      <i class="fa-solid fa-angles-down"></i>
-  </div>
-
-  <div class="full-width-bg">
-
-    <div id="services-container">
-      <!-- Service Cards -->
-      <div class="service-card">
-          <img src="images/talk.png" alt="Business Consultation">
-          <h3>Business Consultation</h3>
-          <p>Getting Marketing, Competitive & SWOT analyses of your business</p>
-      </div>
-      <div class="service-card">
-          <img src="images/web.png" alt="Websites">
-          <h3>Websites</h3>
-          <p>Creating your web presence exactly the way you want</p>
-      </div>
-      <div class="service-card">
-          <img src="images/cube.png" alt="Branding">
-          <h3>Branding</h3>
-          <p>Creating brand strategies across digital platforms</p>
-      </div>
-      <div class="service-card">
-          <img src="images/mic.png" alt="Content Solutions">
-          <h3>Content Solutions</h3>
-          <p>Creating, distributing, and optimizing valuable content</p>
-      </div>
-      <div class="service-card">
-          <img src="images/key.png" alt="SEO">
-          <h3>SEO</h3>
-          <p>Optimizing website content, structure, and authority to rank higher</p>
-      </div>
-      <div class="service-card">
-          <img src="images/sm.png" alt="SMM">
-          <h3>SMM</h3>
-          <p>Enhancing brand awareness and engagement in target audiences</p>
-      </div>
-      <div class="service-card">
-          <img src="images/cart.png" alt="E-Com Solutions">
-          <h3>E-Com Solutions</h3>
-          <p>Boosts online sales through targeted ads & CRO to convert customers</p>
-      </div>
-      <div class="service-card">
-          <img src="images/message.png" alt="Retention Solutions">
-          <h3>Retention Solutions</h3>
-          <p>Nurturing leads, retaining & driving conversions through EM, WA & SMS</p>
-      </div>
-      <div class="service-card">
-          <img src="images/android.png" alt="App Solutions">
-          <h3>App Solutions</h3>
-          <p>Building relationships and driving conversions</p>
-      </div>
-      <div class="service-card">
-          <img src="images/magnet.png" alt="Lead Solutions">
-          <h3>Lead Solutions</h3>
-          <p>Creating targeted campaigns to attract & capture potential customers</p>
-      </div>
-      <div class="service-card">
-          <img src="images/setting.png" alt="SEM">
-          <h3>SEM</h3>
-          <p>Driving targeted traffic and conversions on search engines</p>
-      </div>
-      <div class="service-card">
-          <img src="images/funnel.png" alt="Funnel">
-          <h3>Funnel</h3>
-          <p>Converting your online visitors into actual paying customers</p>
-      </div>
     </div>
-    </div>
-  
-</section>
 
-<!-- try ouradrop -->
-  
-<section class="try">
-  <div class="imagebreak">
-    <img src="images/white.png" alt="Decorative white section with a wave pattern" loading="lazy">
-  </div>
-  <div class="today">
-    <h1>Try Ouradrop Today For Free And<br>Witness The Awesomeness For Yourself</h1>
-  </div>
-</section>
+    <br />
+    <br />
 
-<!-- larger cta -->
+    <!-- review sec -->
 
-<div class="cta-container3">
-  <a href="#consultation" class="cta-button3" onclick="openPopup()">Get A Free Consultation >></a>
-  <p class="cta-tagline">No Hidden Fees, No Sales Pressure • Just Consultation</p>
-</div>
+    <section class="reviews">
+      <script
+        src="https://static.elfsight.com/platform/platform.js"
+        async
+      ></script>
+      <div
+        class="elfsight-app-48e7025d-90e9-40f3-93ae-c50ed377f84b"
+        data-elfsight-app-lazy
+      ></div>
+    </section>
 
-<br>
-<br>
+    <!-- faq -->
 
+    <section class="sect">
+      <h2 class="title">Frequently Asked Questions</h2>
 
-<!-- review sec -->
+      <div class="faq">
+        <div class="question">
+          <h3>What Ouradrop Really Is?</h3>
 
-<section class="reviews">
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-48e7025d-90e9-40f3-93ae-c50ed377f84b" data-elfsight-app-lazy></div>
-</section>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-
-<!-- faq -->
-
-
-<section class="sect">
-  <h2 class="title">Frequently Asked Questions</h2>
-
- <div class="faq">
-    <div class="question">
-        <h3>What Ouradrop Really Is?</h3>
-
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            Ouradrop is a digital marketing agency focused on helping businesses
+            grow and thrive in the online space.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          Ouradrop is a digital marketing agency focused on 
-          helping businesses grow and thrive in the online space.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>What services does Ouradrop offer?</h3>
 
-  
- <div class="faq">
-    <div class="question">
-        <h3>What services does Ouradrop offer?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            We provide a range of digital marketing services, including SEO, PPC
+            management, social media marketing, content creation, email
+            marketing and web design.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-              We provide a range of digital marketing services, including SEO, PPC management, 
-              social media marketing, content creation, email marketing
-               and web design.
+      <div class="faq">
+        <div class="question">
+          <h3>How can Ouradrop help my business grow?</h3>
 
-         </p>
-     </div>
-  </div>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-
- <div class="faq">
-    <div class="question">
-        <h3>How can Ouradrop help my business grow?</h3>
-
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            Our strategies are designed to improve your online visibility, drive
+            traffic, increase conversions and maximize ROI through data-driven
+            approaches.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          Our strategies are designed to improve your online visibility, drive traffic, increase conversions
-          and maximize ROI through data-driven approaches.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>What industries do you specialize in?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>What industries do you specialize in?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            We have experience working across various industries, including
+            e-commerce, healthcare, real estate, finance, and more.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          We have experience working across various industries, 
-          including e-commerce, healthcare, real estate, finance, and more.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>How long does it take to see results?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>How long does it take to see results?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            The timeline varies depending on the service and your business goals
+            but most clients see noticeable results within 3-6 months
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          The timeline varies depending on the service and your business goals
-          but most clients see noticeable results within 3-6 months
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>
+            Do Ouradrop offer customized digital marketing strategies for
+            different business?
+          </h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>Do Ouradrop offer customized digital marketing strategies for different business?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            Yes! We create personalized strategies that align with your business
+            goals and target audience.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          Yes! We create personalized strategies 
-          that align with your business goals and target audience.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>What makes Ouradrop different from other agencies?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>What makes Ouradrop different from other agencies?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            We focus on building long-term relationships, offer transparent
+            reporting and tailor strategies to each client's unique needs.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          We focus on building long-term relationships, offer transparent reporting
-          and tailor strategies to each client's unique needs.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>How you measure success in digital marketing?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>How you measure success in digital marketing?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            We use key performance indicators (KPIs) like traffic, leads,
+            conversion rates and ROI to measure success and refine strategies.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          We use key performance indicators (KPIs) like traffic, leads, conversion rates
-          and ROI to measure success and refine strategies.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>How do you ensure my business stays ahead of competitors?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>How do you ensure my business stays ahead of competitors?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            We continuously monitor industry trends, analyze competitor activity
+            and adjust strategies to keep your business at the forefront.
+          </p>
+        </div>
       </div>
 
-      <div class="answer">
-        <p>
-          We continuously monitor industry trends, analyze competitor activity 
-          and adjust strategies to keep your business at the forefront.
-         </p>
-     </div>
-  </div>
+      <div class="faq">
+        <div class="question">
+          <h3>How can I get started with Ouradrop?</h3>
 
-  <div class="faq">
-    <div class="question">
-        <h3>How can I get started with Ouradrop?</h3>
+          <i class="fa-solid fa-angle-down svg"></i>
+        </div>
 
-        <i class="fa-solid fa-angle-down svg"></i>
-
+        <div class="answer">
+          <p>
+            Simply reach out to us for a free consultation, and we'll discuss
+            your goals, develop a strategy and start working together to grow
+            your business.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="answer">
-        <p>
-          Simply reach out to us for a free consultation, and we'll discuss your goals, develop a strategy
-          and start working together to grow your business.
-         </p>
-     </div>
-  </div>
-</section>
+    <!-- footer section starts -->
 
-
-
-<!-- footer section starts -->
-
-<footer class="footer">
-  <div class="footer-container">
-      <div class="left-side">
-          <img src="images/textlogo.png" alt="Ouradrop Logo" class="full-logo">
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="left-side">
+          <img
+            src="images/textlogo.png"
+            alt="Ouradrop Logo"
+            class="full-logo"
+          />
           <p class="tagline">Convert People Into Customers</p>
           <p class="location">
-            <strong><a href="https://maps.app.goo.gl/Mbenhzigj3JU9w6B7" target="_blank" class="mumbai">Mumbai, India</a></strong><br>
-              Bldg No 2, Nirman Nagari, Flat no. 6, B-wing,   Shrawan Srushti,
-              Neral, Maharashtra 410101</p>
-              <div class="links">
-                <div class="column">
-                    <a href="#">Affiliate Program</a>
-                    <a href="#services-container">Our Services</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Blogs & Articles</a>
-                    <a href="#">Case Studies</a>
-                    <a href="#">Brand We Work With</a>
-                </div>
-                <div class="column">
-                    <a href="#">Careers</a>
-                    <a href="#">Locations</a>
-                    <a href="#">Sitemap</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy/Settings</a>
-                </div>
+            <strong
+              ><a
+                href="https://maps.app.goo.gl/Mbenhzigj3JU9w6B7"
+                target="_blank"
+                class="mumbai"
+                >Mumbai, India</a
+              ></strong
+            ><br />
+            Bldg No 2, Nirman Nagari, Flat no. 6, B-wing, Shrawan Srushti,
+            Neral, Maharashtra 410101
+          </p>
+          <div class="links">
+            <div class="column">
+              <a href="#">Affiliate Program</a>
+              <a href="#services-container">Our Services</a>
+              <a href="#">About Us</a>
+              <a href="#">Blogs & Articles</a>
+              <a href="#">Case Studies</a>
+              <a href="#">Brand We Work With</a>
             </div>
+            <div class="column">
+              <a href="#">Careers</a>
+              <a href="#">Locations</a>
+              <a href="#">Sitemap</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Cookie Policy/Settings</a>
+            </div>
+          </div>
 
           <div class="contacts">
-            <p><a href="tel:+919168036346"><i class="fas fa-phone"></i>+91 9168036346</a></p>
-            <p><a href="mailto:hello@ouradrop.com"><i class="fas fa-envelope"></i>hello@ouradrop.com</a></p>
-             
+            <p>
+              <a href="tel:+919168036346"
+                ><i class="fas fa-phone"></i>+91 9168036346</a
+              >
+            </p>
+            <p>
+              <a href="mailto:hello@ouradrop.com"
+                ><i class="fas fa-envelope"></i>hello@ouradrop.com</a
+              >
+            </p>
           </div>
 
-          
           <div class="social-icons">
-            <a href="https://instagram.com/ouradrop" target="_blank" class="fa-brands fa-instagram"></a>
-            <a href="https://facebook.com/ouradrop" target="_blank" class="fa-brands fa-facebook"></a>
-            <a href="https://twitter.com/ouradrop" target="_blank" class="fa-brands fa-x-twitter"></a>
-            <a href="https://youtube.com/@ouradrop" target="_blank" class="fa-brands fa-youtube"></a>
-            <a href="https://linkedin.com/company/ouradrop" target="_blank" class="fa-brands fa-linkedin-in"></a>
+            <a
+              href="https://instagram.com/ouradrop"
+              target="_blank"
+              class="fa-brands fa-instagram"
+            ></a>
+            <a
+              href="https://facebook.com/ouradrop"
+              target="_blank"
+              class="fa-brands fa-facebook"
+            ></a>
+            <a
+              href="https://twitter.com/ouradrop"
+              target="_blank"
+              class="fa-brands fa-x-twitter"
+            ></a>
+            <a
+              href="https://youtube.com/@ouradrop"
+              target="_blank"
+              class="fa-brands fa-youtube"
+            ></a>
+            <a
+              href="https://linkedin.com/company/ouradrop"
+              target="_blank"
+              class="fa-brands fa-linkedin-in"
+            ></a>
           </div>
-        
-      </div>
+        </div>
 
-    
-
-      <div class="right-side">
-        <div class="form-backgrounds">
-          <div class="form-container">
+        <div class="right-side">
+          <div class="form-backgrounds">
+            <div class="form-container">
               <h3>Talk With Expert</h3>
-              <h2>Let's Create Something <br>AMAZING Together</h2>
- 
-                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                  <input type="hidden" name="access_key" value="649f67d6-4952-4497-a453-7eb59e1a7a32">
+              <h2>Let's Create Something <br />AMAZING Together</h2>
 
-                  <div class="form-group">
-                    <i class="fa-regular fa-user"></i>
-                    <input type="text" name="name" placeholder="Your Name*" id="name" required oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="contactForm"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="649f67d6-4952-4497-a453-7eb59e1a7a32"
+                />
+
+                <div class="form-group">
+                  <i class="fa-regular fa-user"></i>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name*"
+                    id="name"
+                    required
+                    oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"
+                  />
                 </div>
                 <div class="form-group">
                   <i class="fa-solid fa-phone"></i>
-                  <input type="text" name="phone" placeholder="Mobile Number*" id="phone" maxlength="10" required
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                  <small id="phoneError" style="color: red; display: none;">Please enter exactly 10 digits.</small>
-              </div>
-          
-              
-                  <div class="form-group">
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Email ID*" required>
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Mobile Number*"
+                    id="phone"
+                    maxlength="10"
+                    required
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  />
+                  <small id="phoneError" style="color: red; display: none"
+                    >Please enter exactly 10 digits.</small
+                  >
                 </div>
-                  <div class="form-group">
-                    <i class="fa-regular fa-building"></i>
-                    <input type="text" name="business_name" placeholder="Business Name">
-                  </div>
-                    <div class="form-group">
-                      <i class="fa-solid fa-globe"></i>
-                      <input type="url" name="website" placeholder="Business Website">
-                  </div>
-                  <div class="form-group">
-                    <i class="fa-regular fa-comment-dots"></i>
-                      <textarea name="message"  placeholder="Your Message"></textarea>
-                  </div>
-                  <div class="cta-containerx">
-                   
-                    <button type="submit" class="cta-buttonx">Get A Free Consultation >></button>
+
+                <div class="form-group">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email ID*"
+                    required
+                  />
                 </div>
-                  
+                <div class="form-group">
+                  <i class="fa-regular fa-building"></i>
+                  <input
+                    type="text"
+                    name="business_name"
+                    placeholder="Business Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <i class="fa-solid fa-globe"></i>
+                  <input
+                    type="url"
+                    name="website"
+                    placeholder="Business Website"
+                  />
+                </div>
+                <div class="form-group">
+                  <i class="fa-regular fa-comment-dots"></i>
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <div class="cta-containerx">
+                  <button type="submit" class="cta-buttonx">
+                    Get A Free Consultation >>
+                  </button>
+                </div>
               </form>
+            </div>
           </div>
         </div>
-    </div>
-    
-  </div>
-  
-  
+      </div>
+    </footer>
 
-</footer>
-
-  
-<div class="popup-overlay" id="popupOverlay">
-  <div class="form-popup" id="popupForm">
-      <div class="form-background">
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="form-popup" id="popupForm">
+        <div class="form-background">
           <div class="form-container">
-              <span class="close-btn" onclick="closePopup()">&times;</span>
-              <h3>Talk With Expert</h3>
-              <h2>Let's Create Something <br>AMAZING Together</h2>
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3>Talk With Expert</h3>
+            <h2>Let's Create Something <br />AMAZING Together</h2>
 
-              <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                  <input type="hidden" name="access_key" value="649f67d6-4952-4497-a453-7eb59e1a7a32">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="contactForm"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="649f67d6-4952-4497-a453-7eb59e1a7a32"
+              />
 
-                  <div class="form-group">
-                    <i class="fa-regular fa-user"></i>
-                    <input type="text" name="name" placeholder="Your Name*" id="name" required oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
-                </div>
-                  <!-- <div class="form-group">
+              <div class="form-group">
+                <i class="fa-regular fa-user"></i>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name*"
+                  id="name"
+                  required
+                  oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"
+                />
+              </div>
+              <!-- <div class="form-group">
                     <i class="fa-solid fa-phone"></i>
                     <input type="text" name="phone" placeholder="Mobile Number*" id="phone" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57">
                 </div> -->
 
-                <div class="form-group">
-                  <i class="fa-solid fa-phone"></i>
-                  <input type="text" name="phone" placeholder="Mobile Number*" id="phone" maxlength="10" required
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                  <small id="phoneError" style="color: red; display: none;">Please enter exactly 10 digits.</small>
+              <div class="form-group">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Mobile Number*"
+                  id="phone"
+                  maxlength="10"
+                  required
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                />
+                <small id="phoneError" style="color: red; display: none"
+                  >Please enter exactly 10 digits.</small
+                >
               </div>
-          
-                
-              
-                
-                  <div class="form-group">
-                      <i class="fa-regular fa-envelope"></i>
-                      <input type="email" name="email" placeholder="Email ID*" required>
-                  </div>
-                  <div class="form-group">
-                      <i class="fa-regular fa-building"></i>
-                      <input type="text" name="business_name" placeholder="Business Name">
-                  </div>
-                  <div class="form-group">
-                      <i class="fa-solid fa-globe"></i>
-                      <input type="url" name="website" placeholder="Business Website">
-                  </div>
-                  <div class="form-group">
-                      <i class="fa-regular fa-comment-dots"></i>
-                      <textarea name="message" placeholder="Your Message"></textarea>
-                  </div>
-                  <div class="cta-containerx">
-                      <button type="submit" class="cta-buttonx">Get A Free Consultation >></button>
-                  </div>
-              </form>
+
+              <div class="form-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email ID*"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa-regular fa-building"></i>
+                <input
+                  type="text"
+                  name="business_name"
+                  placeholder="Business Name"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa-solid fa-globe"></i>
+                <input
+                  type="url"
+                  name="website"
+                  placeholder="Business Website"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa-regular fa-comment-dots"></i>
+                <textarea name="message" placeholder="Your Message"></textarea>
+              </div>
+              <div class="cta-containerx">
+                <button type="submit" class="cta-buttonx">
+                  Get A Free Consultation >>
+                </button>
+              </div>
+            </form>
           </div>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
 
-
- <div class="end">
-
- </div>
-  <script src="script.js"></script>
-
-    
-</body>
+    <div class="end"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
