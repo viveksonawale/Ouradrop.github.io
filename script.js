@@ -42,19 +42,26 @@ function closePopup() {
     document.getElementById("popupOverlay").style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        let phoneInput = document.getElementById("phone");
-        let phoneError = document.getElementById("phoneError");
+// form condition s
 
-        // Strict validation: Only allow exactly 10 digits
-        if (!/^\d{10}$/.test(phoneInput.value)) {
-            phoneError.style.display = "block"; // Show error message
-            event.preventDefault(); // Stop form submission
-        } else {
-            phoneError.style.display = "none"; // Hide error if input is valid
-        }
-    });
-});
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.getElementById("contactForm").addEventListener("submit", function(event) {
+//         let phoneInput = document.getElementById("phone");
+//         let phoneError = document.getElementById("phoneError");
+
+//         // Strict validation: Only allow exactly 10 digits
+//         if (!/^\d{10}$/.test(phoneInput.value)) {
+//             phoneError.style.display = "block"; // Show error message
+//             event.preventDefault(); // Stop form submission
+//         } else {
+//             phoneError.style.display = "none"; // Hide error if input is valid
+//         }
+//     });
+// });
 
 

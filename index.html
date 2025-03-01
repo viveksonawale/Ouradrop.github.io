@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< Updated upstream
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,28 @@
               <img src="images/logos.png" alt="Ouradrop Logo">
             </a>
           </div>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon Logo -->
+
+    <link rel="webmanifest" href="site.webmanifest" />
+>>>>>>> Stashed changes
 
           <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
@@ -719,6 +742,7 @@
                 </div>
                 <div class="form-group">
                   <i class="fa-solid fa-phone"></i>
+<<<<<<< Updated upstream
                   <input type="text" name="phone" placeholder="Mobile Number*" id="phone" maxlength="10" required
                       oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                   <small id="phoneError" style="color: red; display: none;">Please enter exactly 10 digits.</small>
@@ -728,6 +752,21 @@
                   <div class="form-group">
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" name="email" placeholder="Email ID*" required>
+=======
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Mobile Number*"
+                    id="phone"
+                    maxlength="10"
+                    required
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    onblur="validatePhone()"
+                  />
+                  <small id="phoneError" style="color: red; display: none">
+                    Please enter exactly 10 digits.
+                  </small>
+>>>>>>> Stashed changes
                 </div>
                   <div class="form-group">
                     <i class="fa-regular fa-building"></i>
@@ -778,6 +817,7 @@
                     <input type="text" name="phone" placeholder="Mobile Number*" id="phone" minlength="10" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57">
                 </div> -->
 
+<<<<<<< Updated upstream
                 <div class="form-group">
                   <i class="fa-solid fa-phone"></i>
                   <input type="text" name="phone" placeholder="Mobile Number*" id="phone" maxlength="10" required
@@ -808,11 +848,61 @@
                       <button type="submit" class="cta-buttonx">Get A Free Consultation >></button>
                   </div>
               </form>
+=======
+              <div class="form-group">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Mobile Number*"
+                  id="phone"
+                  maxlength="10"
+                  required
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                />
+                <small id="phoneError" style="color: red; display: none"
+                  >Please enter exactly 10 digits.</small
+                >
+              </div>
+
+              <div class="form-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email ID*"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa-regular fa-building"></i>
+                <input
+                  type="text"
+                  name="business_name"
+                  placeholder="Business Name"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa-solid fa-globe"></i>
+                <input type="" name="website" placeholder="Business Website" />
+              </div>
+              <div class="form-group">
+                <i class="fa-regular fa-comment-dots"></i>
+                <textarea name="message" placeholder="Your Message"></textarea>
+              </div>
+              <div class="cta-containerx">
+                <button type="submit" class="cta-buttonx">
+                  Get A Free Consultation >>
+                </button>
+              </div>
+            </form>
+>>>>>>> Stashed changes
           </div>
       </div>
   </div>
 </div>
 
+<<<<<<< Updated upstream
 
  <div class="end">
 
@@ -822,3 +912,21 @@
     
 </body>
 </html>
+=======
+    <div class="end"></div>
+    <script>
+      function validatePhone() {
+        const phoneInput = document.getElementById("phone");
+        const phoneError = document.getElementById("phoneError");
+
+        if (phoneInput.value.length !== 10) {
+          phoneError.style.display = "inline";
+        } else {
+          phoneError.style.display = "none";
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+>>>>>>> Stashed changes

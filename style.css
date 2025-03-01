@@ -2230,6 +2230,8 @@ textarea::placeholder {
 .popup-overlay {
   display: none;
   position: fixed;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -2259,11 +2261,22 @@ textarea::placeholder {
 @keyframes popup-fade {
   from {
     opacity: 0;
-    transform: translateY(-1.25rem); /* 20px = 1.25rem */
+    transform: translateY(2.25rem); 
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+}
+@keyframes fadeOut {
+  rom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }
 
@@ -2277,7 +2290,13 @@ textarea::placeholder {
   color: #e74c3c;
 }
 
+<<<<<<< Updated upstream
 
+=======
+.form-background.hidden {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+>>>>>>> Stashed changes
 @media (max-width: 768px) {
 
   .form-background {
